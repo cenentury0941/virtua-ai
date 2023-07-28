@@ -1,0 +1,27 @@
+@use "../../../scss/" as *;
+
+.credit {
+    height: 100%;
+    overflow: hidden;
+    @include flex(center, center);
+
+    video {
+        position: absolute;
+    }
+
+    &__content {
+        position: relative;
+
+        .title {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:60vh;
+        }
+
+        .btns > * ~ * {
+            margin-left: 1rem;
+        }
+    }
+}

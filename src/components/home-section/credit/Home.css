@@ -1,0 +1,154 @@
+.Scroller{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    scroll-snap-type: both mandatory;
+    position: relative;
+}
+
+.Container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+
+
+@media (orientation: portrait) {
+
+    .Container{
+        display: none;
+        height: 100vh;
+        width: 100vw;
+        flex-direction: column;
+        align-items: start;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        flex-shrink: 0;
+        scroll-snap-align: center;
+        position: relative;
+    }
+    
+}
+
+.emailIcon{
+    position: absolute;
+    top: 12vh;
+    left: 18vw;
+    height: 39%;
+    aspect-ratio: 1;
+    text-shadow: 5px 5px #39393939;
+    font-weight: 500;
+    background-image: url("./images/email.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Container > h1{
+    font-size: 15vh;
+    position: absolute;
+    top: 42vh;
+    left: 10vw;
+    text-shadow: 5px 5px #39393939;
+    font-weight: 500;
+}
+
+
+.Container > h2{
+    font-size: 4vh;
+    position: absolute;
+    top: 62vh;
+    left: 10vw;
+    text-shadow: 5px 5px #39393939;
+    text-align: left;
+    font-weight: 100;
+}
+
+.Start{
+    background-image: url("./images/home_bg.png");
+    background-position: end;
+    background-size: cover;
+}
+
+.Blank{
+    background-color: white;
+}
+
+.BotBG{
+    background-image: url("./images/bot_bg.png");
+}
+
+.Reverse{
+    background-image: linear-gradient( to right , #d18cff , #822bce  ); 
+}
+
+.About{
+    background-image: url("./images/steps_bg.png");
+    background-size: cover;
+}
+
+.HLD{
+    background-image: url("./images/hld_bg.png");
+    background-size: cover;
+}
+
+.ButtonContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Button{    
+    display: flex;
+    height: 8vh;
+    aspect-ratio: 3.9;
+    background-image: linear-gradient(to top right , rgba(1, 47, 47, 0.48) , rgba(49, 0, 37, 0.503));
+    border: 2px solid black;
+    box-shadow: 0px 0px 5px 0px rgba(0, 255, 255, 0.682);
+    border-radius: 1vh;
+    margin-right: 10%;
+    color: #DDD;
+    font-size: 1vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.2s;
+    user-select: none;
+}
+
+.SmallButton{
+    height: 6vh;
+    aspect-ratio: 5;
+    font-size: 30%;
+}
+
+.Button:hover{
+    color: black;
+    background-image: linear-gradient(to top right , rgb(68, 255, 255) , rgb(215, 59, 254));
+    scale: 1.01;
+}
+
+.Button:active{
+    background-color: #696969;
+}
+
+.AlignCenterRight{
+    align-items: end;
+    justify-content: center;
+    gap: 2%;
+}
